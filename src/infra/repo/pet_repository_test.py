@@ -4,7 +4,6 @@ from src.infra.config import DBConnectionHandler
 from src.infra.entities.pets import AnimalTypes
 from .pet_repository import PetRepository
 
-
 faker = Faker()
 pet_repository = PetRepository()
 db_connection_handler = DBConnectionHandler()
