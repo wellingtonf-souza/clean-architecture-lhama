@@ -20,7 +20,7 @@ class FindUserSpy:
         response = None
         validate_entry = isinstance(user_id, int)
         if validate_entry:
-            response = [mock_users]
+            response = [mock_users()]
         return {"Success": validate_entry, "Data": response}
 
     def by_name(self, name: str) -> Dict[bool, List[Users]]:
@@ -31,7 +31,7 @@ class FindUserSpy:
         response = None
         validate_entry = isinstance(name, str)
         if validate_entry:
-            response = [mock_users]
+            response = [mock_users()]
         return {"Success": validate_entry, "Data": response}
 
     def by_id_and_name(self, user_id: int, name: str) -> Dict[bool, List[Users]]:
@@ -43,5 +43,5 @@ class FindUserSpy:
         response = None
         validate_entry = isinstance(user_id, int) and isinstance(name, str)
         if validate_entry:
-            response = [mock_users]
+            response = [mock_users()]
         return {"Success": validate_entry, "Data": response}
