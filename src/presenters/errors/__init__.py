@@ -1,1 +1,1 @@
-from .http_erros import HttpErros
+from .http_erros import HttpErrors

@@ -1,7 +1,7 @@
 from typing import Type
 from src.domain.use_cases import FindUser
 from src.presenters.helpers.http_models import HttpResponse, HttpRequest
-from src.presenters.errors import HttpErros
+from src.presenters.errors import HttpErrors
 
 
 class FindUserController:
@@ -36,14 +36,14 @@ class FindUserController:
             else:
                 response = {"Success": False, "Data": None}
             if response["Success"] is False:
-                http_error = HttpErros.error_422()
+                http_error = HttpErrors.error_422()
                 return HttpResponse(
                     status_code=http_error["status_code"], body=http_error["body"]
                 )
             return HttpResponse(status_code=200, body=response["Data"])
 
         # if no query in http_request
-        http_error = HttpErros.error_400()
+        http_error = HttpErrors.error_400()
         return HttpResponse(
             status_code=http_error["status_code"], body=http_error["body"]
         )

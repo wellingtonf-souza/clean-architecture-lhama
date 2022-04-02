@@ -1,4 +1,4 @@
-class HttpErros:
+class HttpErrors:
     """Class to define erros in http"""
 
     @staticmethod
