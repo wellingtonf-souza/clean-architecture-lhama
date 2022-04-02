@@ -10,3 +10,8 @@ class HttpErrors:
     def error_400():
         """400"""
         return {"status_code": 400, "body": {"error": "Bad request"}}
+
+    @staticmethod
+    def error_409():
+        """409"""
+        return {"status_code": 409, "body": {"error": "Conflict"}}
